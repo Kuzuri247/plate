@@ -21,6 +21,7 @@ export default function ThemeSwitch() {
         alt="Loading Light/Dark Toggle"
         priority={false}
         title="Loading Light/Dark Toggle"
+        className="dark:text-neutral-700"
       />
     );
 

@@ -5,7 +5,7 @@ import { recentSessions } from "@/constants";
 
 const Page = () => {
   return (
-    <main>
+    <main className="pb-3">
       <h1 className="text-2xl underline"></h1>
       <section className="home-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <CompanionCard
