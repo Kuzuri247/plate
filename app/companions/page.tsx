@@ -2,7 +2,7 @@ import React from 'react'
 
 const CompanionsLibrary = () => {
   return (
-    <div>CompanionsLibrary</div>
+    <div className='min-h-[80vh]'>CompanionsLibrary</div>
   )
 }
 

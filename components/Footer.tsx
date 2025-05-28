@@ -1,0 +1,22 @@
+import React from 'react'
+
+const Footer = () => {
+  return (
+    <footer className=' flex items-center justify-center w-full bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700'>
+        <span className='text-gray-600 text-sm px-2 py-6'>
+            &copy; {new Date().getFullYear()} Made with ❤️ by{' '}
+            <a
+            href="https://github.com/Kuzuri247"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-blue-600"
+            >
+            Kuzuri
+            </a>
+        </span>
+        
+    </footer>
+  )
+}
+
+export default Footer
