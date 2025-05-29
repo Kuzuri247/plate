@@ -10,7 +10,7 @@ const navItems = [
     href: "/companions",
   },
   {
-    name: "MyJourney",
+    name: "Journey",
     href: "/my-journey",
   },
 ];
@@ -28,7 +28,10 @@ const NavItems = () => {
         <Link
           href={href}
           key={name}
-          className={cn(pathname === href ? "text-primary" : "text-muted-foreground", "font-semibold transition-colors hover:text-primary")}
+          className={cn(
+            pathname === href ? "text-primary" : "text-muted-foreground",
+            "font-semibold transition-colors hover:text-primary",
+          )}
         >
           {name}
         </Link>

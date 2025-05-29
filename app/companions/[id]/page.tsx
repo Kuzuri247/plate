@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CompanionSession = () => {
-  return (
-    <div>CompanionSession</div>
-  )
-}
+  return <div>CompanionSession</div>;
+};
 
-export default CompanionSession
+export default CompanionSession;

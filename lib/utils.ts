@@ -12,14 +12,15 @@ export const getSubjectColor = (subject: string) => {
 };
 
 export const configureAssistant = (voice: string, style: string) => {
-  const voiceId = voices[voice as keyof typeof voices][
-          style as keyof (typeof voices)[keyof typeof voices]
-          ] || "sarah";
+  const voiceId =
+    voices[voice as keyof typeof voices][
+      style as keyof (typeof voices)[keyof typeof voices]
+    ] || "sarah";
 
   const vapiAssistant: CreateAssistantDTO = {
     name: "Companion",
     firstMessage:
-        "Hello, let's start the session. Today we'll be talking about {{topic}}.",
+      "Hello, let's start the session. Today we'll be talking about {{topic}}.",
     transcriber: {
       provider: "deepgram",
       model: "nova-3",

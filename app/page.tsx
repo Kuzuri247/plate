@@ -2,10 +2,12 @@ import CompanionCard from "@/components/CompanionCard";
 import CompanionList from "@/components/CompanionList";
 import CTA from "@/components/CTA";
 import { recentSessions } from "@/constants";
+import Banner from "@/components/Banner";
 
 const Page = () => {
   return (
     <main className="pb-3">
+      <Banner />
       <h1 className="text-2xl underline"></h1>
       <section className="home-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <CompanionCard
@@ -35,7 +37,7 @@ const Page = () => {
           topic="World History"
           bookmarked={false}
         />
-         {/* <CompanionCard
+        {/* <CompanionCard
           id="4"
           name="fourth"
           subject="Literature"

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CompanionsLibrary = () => {
-  return (
-    <div className='min-h-[80vh]'>CompanionsLibrary</div>
-  )
-}
+  return <div className="min-h-[80vh]">CompanionsLibrary</div>;
+};
 
-export default CompanionsLibrary
+export default CompanionsLibrary;

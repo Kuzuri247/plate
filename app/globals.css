@@ -174,7 +174,7 @@ body {
     @apply bg-primary flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-white;
   }
   .navbar {
-    @apply mx-auto flex w-full items-center justify-between bg-white px-20 py-4 max-sm:px-4;
+    @apply mx-auto flex w-full items-center justify-between bg-white dark:bg-slate-50 px-12 py-4 max-sm:px-4 max-md:mx-5;
   }
   .btn-signin {
     @apply flex cursor-pointer items-center gap-2 rounded-4xl border border-black px-4 py-2.5 text-sm font-semibold;

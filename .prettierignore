@@ -1,3 +1,16 @@
 # Ignore artifacts:
 build
 coverage
+dist
+# Ignore dependencies:
+node_modules
+# Ignore logs:
+npm-debug.log
+# Ignore configuration files:
+.prettierrc
+# Ignore IDE specific files:
+.idea
+# Ignore OS generated files:
+.DS_Store
+# Ignore environment files:
+.env

@@ -89,13 +89,13 @@ const CompanionForm = () => {
                   <SelectContent>
                     {subjects.map((subject) => (
                       <SelectItem
-                         key={subject}
+                        key={subject}
                         value={subject}
                         className="capitalize"
                       >
                         {subject}
                       </SelectItem>
-                    ))} 
+                    ))}
                   </SelectContent>
                 </Select>
               </FormControl>
@@ -140,7 +140,6 @@ const CompanionForm = () => {
                     <SelectItem value="male">Male</SelectItem>
 
                     <SelectItem value="female">Female</SelectItem>
-                    
                   </SelectContent>
                 </Select>
               </FormControl>
@@ -167,7 +166,6 @@ const CompanionForm = () => {
                     <SelectItem value="formal">Formal</SelectItem>
 
                     <SelectItem value="casual">Casual</SelectItem>
-                    
                   </SelectContent>
                 </Select>
               </FormControl>
@@ -183,7 +181,7 @@ const CompanionForm = () => {
               <FormLabel>Estimated session duration</FormLabel>
               <FormControl>
                 <Input
-                type="number"
+                  type="number"
                   placeholder="15 mins "
                   {...field}
                   className="input"
@@ -196,7 +194,9 @@ const CompanionForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full cursor-pointer">Submit</Button>
+        <Button type="submit" className="w-full cursor-pointer">
+          Submit
+        </Button>
       </form>
     </Form>
   );
