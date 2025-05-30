@@ -23,7 +23,7 @@ const NavItems = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-8">
+    <nav className="flex items-center gap-10">
       {navItems.map(({ name, href }) => (
         <Link
           href={href}

@@ -25,13 +25,13 @@ const CompanionCard = ({
   bookmarked,
 }: CompanionCardProps) => {
   const pathname = usePathname();
-  // const handleBookmark = async () => {
-  //   if (bookmarked) {
-  //     await removeBookmark(id, pathname);
-  //   } else {
-  //     await addBookmark(id, pathname);
-  //   }
-  // };
+  const handleBookmark = async () => {
+    if (bookmarked) {
+      await removeBookmark(id, pathname);
+    } else {
+      await addBookmark(id, pathname);
+    }
+  };
   return (
     <article className="companion-card" style={{ backgroundColor: color }}>
       <div className="flex justify-between items-center">
