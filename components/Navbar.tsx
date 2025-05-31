@@ -13,7 +13,7 @@ import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   return (
-    <nav className="navbar border border-black w-[90%] rounded-full gap-6 sticky top-0 transtion-bg-transparent z-10">
+    <nav className="navbar border border-black w-[90%] rounded-full gap-6 sticky top-0 transtion-bg-transparent z-10 shadow-[5px_5px_0px_0px_rgba(109,40,217)] max-[720px]:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <Link href="/" className="text-xl font-bold dark:text-neutral-700">
         BabbleBuddy
       </Link>

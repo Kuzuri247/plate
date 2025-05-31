@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section className="cta-section">
+    <section className="cta-section shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
       <div className="cta-badge">Start learning</div>
       <h2 className="text-3xl font-bold">Today</h2>
       <p>

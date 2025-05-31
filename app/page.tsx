@@ -14,7 +14,7 @@ const Page = () => {
       <section className="home-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <CompanionCard
           id="1"
-          name="first"
+          name="First"
           subject="Math"
           duration={45}
           color="#34d5eb"
@@ -23,7 +23,7 @@ const Page = () => {
         />
         <CompanionCard
           id="2"
-          name="second"
+          name="Second"
           subject="Science"
           duration={45}
           color="#64eb34"
@@ -32,10 +32,10 @@ const Page = () => {
         />
         <CompanionCard
           id="3"
-          name="third"
+          name="Third"
           subject="History"
           duration={45}
-          color="#3734eb"
+          color="#FFB6C1"
           topic="World History"
           bookmarked={false}
         />
@@ -72,7 +72,7 @@ const Page = () => {
         <CompanionList
           title="Recent Sessions"
           companions={recentSessions}
-          classNames="w-2/3 max-lg:w-full"
+          classNames="w-2/3 max-lg:w-full shadow-[-4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
         />
         <CTA />
       </section>

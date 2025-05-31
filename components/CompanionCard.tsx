@@ -33,7 +33,7 @@ const CompanionCard = ({
     }
   };
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article className="companion-card shadow-[0_3px_10px_rgb(0,0,0,0.2)]" style={{ backgroundColor: color }}>
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
         <button className="companion-bookmark" onClick={handleBookmark}>
@@ -56,6 +56,7 @@ const CompanionCard = ({
           alt="duration"
           width={13.5}
           height={13.5}
+          className="bg-slate-50 rounded-full"
         />
         <p className="text-sm">{duration} minutes</p>
       </div>
