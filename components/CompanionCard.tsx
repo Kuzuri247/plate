@@ -1,6 +1,6 @@
 "use client";
-// import { removeBookmark } from "@/lib/actions/companion.actions";
-// import { addBookmark } from "@/lib/actions/companion.actions";
+import { removeBookmark } from "@/lib/actions/companion.actions";
+import { addBookmark } from "@/lib/actions/companion.actions";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -48,8 +48,8 @@ const CompanionCard = ({
         </button>
       </div>
 
-      <h2 className="text-2xl font-bold">{name}</h2>
-      <p className="text-sm">{topic}</p>
+      <h2 className="text-2xl font-bold dark:text-neutral-800">{name}</h2>
+      <p className="text-sm dark:text-neutral-800">{topic}</p>
       <div className="flex items-center gap-2">
         <Image
           src="/icons/clock.svg"
@@ -58,7 +58,7 @@ const CompanionCard = ({
           height={13.5}
           className="bg-slate-50 rounded-full"
         />
-        <p className="text-sm">{duration} minutes</p>
+        <p className="text-sm dark:text-neutral-800">{duration} minutes</p>
       </div>
 
       <Link href={`/companions/${id}`} className="w-full">

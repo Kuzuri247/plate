@@ -17,7 +17,7 @@ const CTA = () => {
         width={360}
         height={240}
       />
-      <button className="btn-primary">
+      <button className="btn-primary border-b-2 dark:border-gray-700">
         <Image src="/icons/plus.svg" alt="plus icon" width={12} height={12} />
         <Link href="/companions/new">
           <p> Build a new companion </p>

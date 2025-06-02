@@ -34,7 +34,7 @@ const Navbar = () => {
         </SignedIn>
       </div>
       {/* Mobile bottom nav for < 720px */}
-      <div className="hidden max-[720px]:flex fixed bottom-0 left-0 w-full py-4 bg-white dark:bg-slate-50 border-t border-black z-20 justify-center">
+      <div className="hidden max-[720px]:flex w-[90%] max-[720px]:w-[75%] max-[420px]:w-[90%] fixed bottom-0 left-1/2 transform -translate-x-1/2 mx-1 my-1 py-4 px-4 bg-white dark:bg-slate-50 border border-black rounded-2xl z-20 justify-center">
         <NavItems />
       </div>
     </nav>

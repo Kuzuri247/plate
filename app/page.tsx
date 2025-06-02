@@ -1,77 +1,35 @@
 import CompanionCard from "@/components/CompanionCard";
 import CompanionList from "@/components/CompanionList";
 import CTA from "@/components/CTA";
-import { recentSessions } from "@/constants";
 import Banner from "@/components/Banner";
+import { getAllCompanions, getRecentSessions } from "@/lib/actions/companion.actions";
+import { getSubjectColor } from "@/lib/utils";
 
-const Page = () => {
+const Page = async () => {
+  const companions = await getAllCompanions({ limit: 3 });
+  const recentSessionsCompanions = await getRecentSessions(10);
+
   return (
     <main className="pb-3">
       <Banner />
       <h1 className="text-2xl underline justify-center text-center font-bold mt-4 pt-4">
-        Your AI Companions
+        AI Companions
       </h1>
+
       <section className="home-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <CompanionCard
-          id="1"
-          name="First"
-          subject="Math"
-          duration={45}
-          color="#34d5eb"
-          topic="Algebra"
-          bookmarked={false}
-        />
-        <CompanionCard
-          id="2"
-          name="Second"
-          subject="Science"
-          duration={45}
-          color="#64eb34"
-          topic="Physics"
-          bookmarked={false}
-        />
-        <CompanionCard
-          id="3"
-          name="Third"
-          subject="History"
-          duration={45}
-          color="#FFB6C1"
-          topic="World History"
-          bookmarked={false}
-        />
-        {/* <CompanionCard
-          id="4"
-          name="fourth"
-          subject="Literature"
-          duration={45}
-          color="#eb34a1"
-          topic="Shakespeare"
-          bookmarked={false}
-        /> 
-        <CompanionCard
-          id="5"
-          name="fifth"
-          subject="Geography"
-          duration={45}
-          color="#ebd134"
-          topic="Maps and Regions"
-          bookmarked={false}
-        />
-        <CompanionCard
-          id="6"
-          name="sixth"
-          subject="Computer Science"
-          duration={45}
-          color="#eb34d1"
-          topic="Programming Basics"
-          bookmarked={false}
-        />  */}
+        {companions.map((companion) => (
+          <CompanionCard
+            key={companion.id}
+            {...companion}
+            color={getSubjectColor(companion.subject)}
+          />
+        ))}{" "}
       </section>
 
       <section className="home-section">
         <CompanionList
           title="Recent Sessions"
-          companions={recentSessions}
+          companions={recentSessionsCompanions}
           classNames="w-2/3 max-lg:w-full shadow-[-4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
         />
         <CTA />

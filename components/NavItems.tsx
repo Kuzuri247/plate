@@ -23,18 +23,18 @@ const NavItems = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-10">
+    <nav className="flex items-center gap-6 sm:gap-10">
       {navItems.map(({ name, href }) => (
-        <Link
-          href={href}
-          key={name}
-          className={cn(
-            pathname === href ? "text-primary" : "text-muted-foreground",
-            "font-semibold transition-colors hover:text-primary",
-          )}
-        >
-          {name}
-        </Link>
+      <Link
+        href={href}
+        key={name}
+        className={cn(
+        pathname === href ? "text-primary" : "text-muted-foreground",
+        "font-semibold transition-colors hover:text-primary",
+        )}
+      >
+        {name}
+      </Link>
       ))}
     </nav>
   );
