@@ -6,7 +6,7 @@ const CTA = () => {
     <section className="cta-section shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
       <div className="cta-badge">Start learning</div>
       <h2 className="text-3xl font-bold">Today</h2>
-      <p>
+      <p className="justity-center text-center">
         Build your own AI companion and start your journey with BabbleBuddy.
         <br />
         Click the button below to create a new companion.
@@ -23,7 +23,7 @@ const CTA = () => {
           <p> Build a new companion </p>
         </Link>
       </button>
-      <div className="pt-6">
+      <div className="pt-2">
         <p className="text-sm text-slate-50">
           Already have a companion?{" "}
           <Link href="/companions" className="text-slate-300">

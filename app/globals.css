@@ -146,9 +146,7 @@ body {
   .home-section {
     @apply flex w-full items-start justify-between gap-4 max-lg:flex-col-reverse max-lg:items-center;
   }
-  .companions-grid {
-    @apply grid w-full grid-cols-3 justify-between gap-4 max-md:justify-center;
-  }
+  
   .companion-card {
     @apply flex w-full flex-col justify-between gap-5 rounded-4xl border border-black px-4 py-4 min-lg:max-w-[410px];
   }
