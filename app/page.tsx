@@ -1,10 +1,13 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 import CompanionCard from "@/components/CompanionCard";
 import CompanionList from "@/components/CompanionList";
 import CTA from "@/components/CTA";
 import Banner from "@/components/Banner";
-import { getAllCompanions, getRecentSessions } from "@/lib/actions/companion.actions";
+import {
+  getAllCompanions,
+  getRecentSessions,
+} from "@/lib/actions/companion.actions";
 import { getSubjectColor } from "@/lib/utils";
 
 const Page = async () => {
@@ -15,7 +18,7 @@ const Page = async () => {
     <main className="pb-3">
       <Banner />
       <h1 className="text-2xl underline justify-center text-center font-bold mt-4 pt-4">
-        AI Companions
+        Popular Companions
       </h1>
 
       <section className="home-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -31,7 +34,7 @@ const Page = async () => {
       <section className="home-section">
         <CompanionList
           title="Recent Sessions"
-          companions={recentSessionsCompanions}
+          companions={recentSessionsCompanions.slice(0, 6)}
           classNames="w-2/3 max-lg:w-full shadow-[-4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
         />
         <CTA />

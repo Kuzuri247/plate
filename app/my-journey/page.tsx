@@ -21,8 +21,8 @@ const Profile = async () => {
   const sessionHistory = await getUserSessions(user.id);
 
   return (
-    <main className="min-h-[80vh]">
-      <section className="flex justify-between gap-4 max-sm:flex-col items-center">
+    <main className="min-h-[90vh]">
+      <section className="flex justify-between gap-4 max-md:flex-col items-center">
         <div className="flex gap-4 items-center">
           <Image
             src={user.imageUrl}
@@ -42,7 +42,8 @@ const Profile = async () => {
         </div>
         <div className="flex gap-4">
           <div className="border border-black dark:border-gray-800 rounded-xl p-3 gap-2 flex flex-col h-fit">
-            <div className="flex gap-2 items-center">
+            <div>Lessons completed</div>
+            <div className="flex gap-2 items-center justify-center">
               <Image
                 src="/icons/check.svg"
                 alt="checkmark"
@@ -51,12 +52,10 @@ const Profile = async () => {
               />
               <p className="font-bold text-2xl">{sessionHistory.length}</p>
             </div>
-            <div>
-              Lessons completed
-            </div>
           </div>
-            <div className="border border-black dark:border-gray-800 rounded-xl p-3 gap-2 flex flex-col h-fit">
-            <div className="flex gap-2 items-center">
+          <div className="border border-black dark:border-gray-800 rounded-xl p-3 gap-2 flex flex-col h-fit">
+            <div>Companions created</div>
+            <div className="flex gap-2 items-center justify-center">
               <Image
                 src="/icons/cap.svg"
                 alt="checkmark"
@@ -65,26 +64,28 @@ const Profile = async () => {
               />
               <p className="font-bold text-2xl">{companions.length}</p>
             </div>
-            <div>
-              Companions created
-            </div>
           </div>
         </div>
       </section>
       <Accordion type="multiple">
         <AccordionItem value="recent">
-          <AccordionTrigger className="text-2xl font-bold">Recent Sessions</AccordionTrigger>
+          <AccordionTrigger className="text-2xl font-bold">
+            Recent Sessions
+          </AccordionTrigger>
           <AccordionContent>
-          <CompanionsList title="Recent Sessions" companions={sessionHistory}/>
+            <CompanionsList
+              title="Recent Sessions"
+              companions={sessionHistory.slice(0, 10)}
+            />
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="companions">
-        <AccordionTrigger className='text-2xl font-bold'>
-          My Companions {`(${companions.length})`}
-        </AccordionTrigger>
-        <AccordionContent>
-          <CompanionsList title="My Companions" companions={companions}/>
-        </AccordionContent>
+          <AccordionTrigger className="text-2xl font-bold">
+            My Companions {`(${companions.length})`}
+          </AccordionTrigger>
+          <AccordionContent>
+            <CompanionsList title="My Companions" companions={companions} />
+          </AccordionContent>
         </AccordionItem>
       </Accordion>
     </main>

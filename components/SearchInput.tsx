@@ -9,8 +9,14 @@ const SearchInput = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const query = searchParams.get("topic") || "";
-  const [searchQuery, setSearchQuery] = useState("");
+
+  const [searchQuery, setSearchQuery] = useState(query);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  //optional for for indirect url update
+  useEffect(() => {
+    setSearchQuery(query);
+  }, [query]);
 
   useEffect(() => {
     const Debounce = setTimeout(() => {
@@ -62,11 +68,16 @@ const SearchInput = () => {
         placeholder=" Ctrl+K.... "
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full outline-none" 
+        className="w-full outline-none"
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();
-            router.push(`${pathname}?query=${searchQuery}`);
+            const newUrl = formUrlQuery({
+              params: searchParams.toString(),
+              key: "topic",
+              value: searchQuery,
+            });
+            router.push(newUrl, { scroll: false });
           }
         }}
       />

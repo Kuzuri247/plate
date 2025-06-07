@@ -64,7 +64,7 @@ const CompanionsList = ({
     companions && companions.length > 0 ? companions : DUMMY_COMPANIONS;
   return (
     <article className={cn("companion-list", classNames)}>
-      <h2 className="font-bold text-3xl">{title}</h2>
+      <h2 className="font-bold text-3xl pb-4">{title}</h2>
 
       <Table>
         <TableHeader>
@@ -80,7 +80,7 @@ const CompanionsList = ({
               <TableRow key={id}>
                 <TableCell>
                   <Link href={`/companions/${id}`}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-4">
                       <div
                         className="size-[72px] flex items-center justify-center rounded-lg max-md:hidden"
                         style={{ backgroundColor: getSubjectColor(subject) }}

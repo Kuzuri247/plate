@@ -9,8 +9,14 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      { hostname: 'img.clerk.com' }
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+        port: '',            
+        pathname: '/**',     
+      }
     ]
   }
 };
+
 export default nextConfig;

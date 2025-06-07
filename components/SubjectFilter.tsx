@@ -15,9 +15,14 @@ import { subjects } from "@/constants/index";
 const SubjectFilter = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const query = searchParams.get("subject") || " ";
+  const query = searchParams.get("subject") || "all";
 
   const [subject, setSubject] = useState(query);
+
+  //optional for for indirect url update
+  useEffect(() => {
+    setSubject(query);
+  }, [query]);
 
   useEffect(() => {
     let newUrl = "";
@@ -38,13 +43,11 @@ const SubjectFilter = () => {
 
   return (
     <Select onValueChange={setSubject} value={subject}>
-      <SelectTrigger className="input capitalize text-black bg-slate-50 dark:bg-gray-700">
-        <SelectValue placeholder="Subject" className="text-black"/>
+      <SelectTrigger className="input capitalize text-black">
+        <SelectValue placeholder="Subject"/>
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="all" className="capitalize">
-          All Subjects
-          </SelectItem>
+        <SelectItem value="all" >All Subjects</SelectItem>
         {subjects.map((subject: string) => (
           <SelectItem key={subject} value={subject} className="capitalize">
             {subject}
